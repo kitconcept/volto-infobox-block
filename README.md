@@ -1,10 +1,10 @@
-# Volto Infoboxes Block (@kitconcept/volto-infoboxes-block)
+# Volto Infobox Block (@kitconcept/volto-infobox-block)
 
 An infobox block for Volto: an optional icon, a title, rich text and a call-to-action button.
 
-[![npm](https://img.shields.io/npm/v/@kitconcept/volto-infoboxes-block)](https://www.npmjs.com/package/@kitconcept/volto-infoboxes-block)
-[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-infoboxes-block/)
-[![CI](https://github.com/kitconcept/volto-infoboxes-block/actions/workflows/main.yml/badge.svg)](https://github.com/kitconcept/volto-infoboxes-block/actions/workflows/main.yml)
+[![npm](https://img.shields.io/npm/v/@kitconcept/volto-infobox-block)](https://www.npmjs.com/package/@kitconcept/volto-infobox-block)
+[![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-infobox-block/)
+[![CI](https://github.com/kitconcept/volto-infobox-block/actions/workflows/main.yml/badge.svg)](https://github.com/kitconcept/volto-infobox-block/actions/workflows/main.yml)
 
 ## Features
 
@@ -60,18 +60,18 @@ The add-on depends on [`@kitconcept/volto-bm3-compat`](https://github.com/kitcon
 
 ## Installation
 
-Add `@kitconcept/volto-infoboxes-block` to your `package.json`:
+Add `@kitconcept/volto-infobox-block` to your `package.json`:
 
 ```json
 "dependencies": {
-    "@kitconcept/volto-infoboxes-block": "*"
+    "@kitconcept/volto-infobox-block": "*"
 }
 ```
 
-Add `@kitconcept/volto-infoboxes-block` to your `volto.config.js`:
+Add `@kitconcept/volto-infobox-block` to your `volto.config.js`:
 
 ```javascript
-const addons = ['@kitconcept/volto-infoboxes-block'];
+const addons = ['@kitconcept/volto-infobox-block'];
 ```
 
 ## Test installation
@@ -100,8 +100,8 @@ For this reason, it only works with pnpm.
 1.  Clone this repository, then change your working directory.
 
     ```shell
-    git clone git@github.com:kitconcept/volto-infoboxes-block.git
-    cd volto-infoboxes-block
+    git clone git@github.com:kitconcept/volto-infobox-block.git
+    cd volto-infobox-block
     ```
 
 2.  Install this code base.

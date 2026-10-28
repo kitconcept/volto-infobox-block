@@ -11,7 +11,7 @@ results
 yarn.lock
 /public
 packages/*
-!packages/volto-infoboxes-block
+!packages/volto-infobox-block
 
 # Playwright
 playwright-report/

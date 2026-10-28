@@ -111,9 +111,9 @@ importers:
 
   .:
     dependencies:
-      '@kitconcept/volto-infoboxes-block':
+      '@kitconcept/volto-infobox-block':
         specifier: workspace:*
-        version: link:packages/volto-infoboxes-block
+        version: link:packages/volto-infobox-block
       '@kitconcept/volto-light-theme':
         specifier: workspace:*
         version: link:packages/volto-light-theme/frontend/packages/volto-light-theme
@@ -1396,7 +1396,7 @@ importers:
         specifier: ^3.1.2
         version: 3.2.7(@types/debug@4.1.13)(@types/node@24.19.2)(@vitest/ui@3.2.7)(jiti@2.7.0)(jsdom@28.1.0(@noble/hashes@1.8.0))(less@3.13.1)(lightningcss@1.33.0)(sass@1.58.0)(terser@5.46.0)(yaml@2.9.1)
 
-  packages/volto-infoboxes-block:
+  packages/volto-infobox-block:
     dependencies:
       '@kitconcept/volto-bm3-compat':
         specifier: 1.0.0-alpha.1

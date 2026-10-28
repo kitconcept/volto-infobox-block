@@ -1,5 +1,5 @@
 const addons = [
-  '@kitconcept/volto-infoboxes-block',
+  '@kitconcept/volto-infobox-block',
   '@kitconcept/volto-light-theme',
 ];
 const theme = '@kitconcept/volto-light-theme';

@@ -19,7 +19,7 @@ const addonAliases = Object.keys(registry.packages).map((o) => [
 module.exports = {
   extends: `${coreLocation}/packages/volto/.eslintrc`,
   // Only lint this add-on; the other packages are mrs-developer checkouts.
-  ignorePatterns: ['packages/*', '!packages/volto-infoboxes-block'],
+  ignorePatterns: ['packages/*', '!packages/volto-infobox-block'],
   rules: {
     'import/no-unresolved': 1,
   },
@@ -31,8 +31,8 @@ module.exports = {
           ['@plone/volto-slate', `${coreLocation}/packages/volto-slate/src`],
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
           [
-            '@kitconcept/volto-infoboxes-block',
-            './packages/volto-infoboxes-block/src',
+            '@kitconcept/volto-infobox-block',
+            './packages/volto-infobox-block/src',
           ],
           ...addonAliases,
         ],

@@ -39,7 +39,7 @@ jobs:
         run: |
           echo "base-tag=sha-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
           echo "storybook-deploy=${{ github.event.repository.private == false }}" >> $GITHUB_OUTPUT
-          echo "path-frontend=packages/volto-infoboxes-block" >> $GITHUB_OUTPUT
+          echo "path-frontend=packages/volto-infobox-block" >> $GITHUB_OUTPUT
 
       - name: Test vars
         run: |

@@ -28,7 +28,7 @@ API_PATH ?= http://127.0.0.1:55001/plone
 PLAYWRIGHT_ARGS ?=
 PLAYWRIGHT_REPORTER ?= list,html
 
-ADDON_NAME='@kitconcept/volto-infoboxes-block'
+ADDON_NAME='@kitconcept/volto-infobox-block'
 
 .PHONY: help
 help: ## Show this help

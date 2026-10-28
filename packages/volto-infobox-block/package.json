@@ -1,5 +1,5 @@
 {
-  "name": "@kitconcept/volto-infoboxes-block",
+  "name": "@kitconcept/volto-infobox-block",
   "version": "1.0.0-alpha.0",
   "description": "An infobox block for Volto: an optional icon, a title, rich text and a call-to-action button.",
   "main": "src/index.ts",
@@ -11,10 +11,10 @@
     "react"
   ],
   "author": "kitconcept GmbH",
-  "homepage": "https://github.com/kitconcept/volto-infoboxes-block#readme",
+  "homepage": "https://github.com/kitconcept/volto-infobox-block#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kitconcept/volto-infoboxes-block"
+    "url": "git@github.com:kitconcept/volto-infobox-block"
   },
   "publishConfig": {
     "access": "public"

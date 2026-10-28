@@ -1,6 +1,6 @@
 # Playwright tests
 
-This directory contains the browser acceptance tests of `@kitconcept/volto-infoboxes-block`.
+This directory contains the browser acceptance tests of `@kitconcept/volto-infobox-block`.
 They follow the setup of [Volto Light Theme](https://github.com/kitconcept/volto-light-theme/tree/main/frontend/acceptance), and the helpers in `tests/` are copied from there.
 
 | Project | Tests | Runtime |
