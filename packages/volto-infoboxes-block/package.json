@@ -1,0 +1,52 @@
+{
+  "name": "@kitconcept/volto-infoboxes-block",
+  "version": "1.0.0-alpha.0",
+  "description": "An infobox block for Volto: an optional icon, a title, rich text and a call-to-action button.",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "kitconcept GmbH",
+  "homepage": "https://github.com/kitconcept/volto-infoboxes-block#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kitconcept/volto-infoboxes-block"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "addons": [
+    "@kitconcept/volto-bm3-compat"
+  ],
+  "theme": "",
+  "dependencies": {
+    "@kitconcept/volto-bm3-compat": "1.0.0-alpha.1",
+    "classnames": "^2.5.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@plone/registry": "workspace:*",
+    "@plone/scripts": "workspace:*",
+    "@plone/types": "workspace:*",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.7.3",
+    "@testing-library/react": "^16.2.0",
+    "release-it": "^19.0.5",
+    "vitest": "^3.1.2"
+  }
+}

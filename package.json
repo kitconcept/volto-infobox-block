@@ -1,0 +1,70 @@
+{
+  "name": "@kitconcept/volto-infoboxes-block-dev",
+  "version": "1.0.0-alpha.0",
+  "description": "An infobox block for Volto: an optional icon, a title, rich text and a call-to-action button.",
+  "author": "kitconcept GmbH",
+  "homepage": "https://github.com/kitconcept/volto-infoboxes-block",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto start",
+    "start:prod": "pnpm --filter @plone/volto start:prod",
+    "build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build",
+    "build:deps": "pnpm --filter @plone/registry --filter @plone/components build",
+    "i18n": "pnpm --filter @kitconcept/volto-infoboxes-block i18n && VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n",
+    "test": "pnpm --filter @kitconcept/volto-infoboxes-block exec vitest --passWithNoTests",
+    "lint": "VOLTOCONFIG=$(pwd)/volto.config.js eslint --max-warnings=0 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "VOLTOCONFIG=$(pwd)/volto.config.js eslint --fix 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "prettier": "prettier --check 'packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write 'packages/**/src/**/*.{js,jsx,ts,tsx}' ",
+    "stylelint": "stylelint 'packages/**/src/**/*.{css,scss,less}' --allow-empty-input",
+    "stylelint:fix": "stylelint 'packages/**/src/**/*.{css,scss,less}' --fix --allow-empty-input",
+    "dry-release": "pnpm --filter @kitconcept/volto-infoboxes-block dry-release",
+    "release": "pnpm --filter @kitconcept/volto-infoboxes-block release",
+    "release-major-alpha": "pnpm --filter @kitconcept/volto-infoboxes-block release-major-alpha",
+    "release-alpha": "pnpm --filter @kitconcept/volto-infoboxes-block release-alpha",
+    "storybook": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto storybook dev -p 6006 -c $(pwd)/.storybook",
+    "storybook-build": "VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto build-storybook -c $(pwd)/.storybook",
+    "test:acceptance": "playwright test --project=acceptance",
+    "test:acceptance:ui": "playwright test --project=acceptance --ui"
+  },
+  "dependencies": {
+    "@plone/volto": "workspace:*",
+    "@plone/registry": "workspace:*",
+    "@kitconcept/volto-infoboxes-block": "workspace:*",
+    "@kitconcept/volto-light-theme": "workspace:*"
+  },
+  "devDependencies": {
+    "mrs-developer": "^2.2.0",
+    "@playwright/test": "^1.60.0",
+    "@axe-core/playwright": "^4.12.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+      "react-refresh": "^0.14.2",
+      "cypress": "-",
+      "@testing-library/cypress": "-",
+      "cypress-axe": "-",
+      "cypress-file-upload": "-"
+    },
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher"
+    ],
+    "onlyBuiltDependencies": [
+      "core-js",
+      "core-js-pure",
+      "es5-ext",
+      "esbuild",
+      "lightningcss-cli",
+      "unrs-resolver"
+    ]
+  },
+  "packageManager": "pnpm@10.20.0"
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Volto Infoboxes Block",
+    "frontend_addon_name": "volto-infoboxes-block",
+    "description": "An infobox block for Volto: an optional icon, a title, rich text and a call-to-action button.",
+    "author": "kitconcept GmbH",
+    "email": "info@kitconcept.com",
+    "github_organization": "kitconcept",
+    "npm_package_name": "@kitconcept/volto-infoboxes-block",
+    "use_prerelease_versions": "No",
+    "volto_version": "19.5.1",
+    "initialize_ci": true,
+    "initialize_documentation": false,
+    "__template__": "frontend_addon"
+}

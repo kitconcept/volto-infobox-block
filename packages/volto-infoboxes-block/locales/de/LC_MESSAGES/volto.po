@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: de\n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Alignment"
+#: components/Blocks/Infobox/schema
+msgid "Alignment"
+msgstr "Ausrichtung"
+
+#. Default: "Button"
+#: components/Blocks/Infobox/schema
+msgid "Button"
+msgstr "Schaltfläche"
+
+#. Default: "Button Text"
+#: components/Blocks/Infobox/schema
+msgid "Button Text"
+msgstr "Schaltflächentext"
+
+#. Default: "Icon"
+#: components/Blocks/Infobox/schema
+msgid "Icon"
+msgstr "Icon"
+
+#. Default: "Infobox"
+#: components/Blocks/Infobox/schema
+msgid "Infobox"
+msgstr "Infobox"
+
+#. Default: "It is advised to use an SVG graphic."
+#: components/Blocks/Infobox/schema
+msgid "It is advised to use an SVG graphic."
+msgstr "Es empfiehlt sich die Verwendung einer SVG-Grafik."
+
+#. Default: "Styling"
+#: components/Blocks/Infobox/schema
+msgid "Styling"
+msgstr "Stil"
+
+#. Default: "Title"
+#: components/Blocks/Infobox/schema
+msgid "Title"
+msgstr "Titel"
+
+#. Default: "Button Link"
+#: components/Blocks/Infobox/schema
+msgid "buttonLink"
+msgstr "Schaltflächenlink"

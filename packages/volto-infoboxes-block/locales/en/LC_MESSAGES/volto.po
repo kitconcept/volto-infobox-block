@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. Default: "Alignment"
+#: components/Blocks/Infobox/schema
+msgid "Alignment"
+msgstr ""
+
+#. Default: "Button"
+#: components/Blocks/Infobox/schema
+msgid "Button"
+msgstr ""
+
+#. Default: "Button Text"
+#: components/Blocks/Infobox/schema
+msgid "Button Text"
+msgstr ""
+
+#. Default: "Icon"
+#: components/Blocks/Infobox/schema
+msgid "Icon"
+msgstr ""
+
+#. Default: "Infobox"
+#: components/Blocks/Infobox/schema
+msgid "Infobox"
+msgstr ""
+
+#. Default: "It is advised to use an SVG graphic."
+#: components/Blocks/Infobox/schema
+msgid "It is advised to use an SVG graphic."
+msgstr ""
+
+#. Default: "Styling"
+#: components/Blocks/Infobox/schema
+msgid "Styling"
+msgstr ""
+
+#. Default: "Title"
+#: components/Blocks/Infobox/schema
+msgid "Title"
+msgstr ""
+
+#. Default: "Button Link"
+#: components/Blocks/Infobox/schema
+msgid "buttonLink"
+msgstr "Button Link"

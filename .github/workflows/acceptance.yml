@@ -1,0 +1,76 @@
+name: Playwright acceptance tests
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        type: string
+        required: true
+      working-directory:
+        type: string
+        required: false
+        default: '.'
+
+jobs:
+  acceptance:
+    name: Playwright acceptance tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+
+    steps:
+      - name: Main checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup uv
+        uses: plone/meta/.github/actions/setup_uv@2.x
+        with:
+          working-directory: ${{ inputs.working-directory }}
+
+      - name: Setup codebase
+        uses: plone/meta/.github/actions/setup_frontend@2.x
+        with:
+          node-version: ${{ inputs.node-version }}
+          working-directory: ${{ inputs.working-directory }}
+
+      - name: Install Playwright browsers
+        run: make install-playwright
+
+      - uses: JarvusInnovations/background-action@v2
+        name: Start Servers - Volto and Plone (acceptance)
+        with:
+          run: |
+            make ci-acceptance-backend-start &
+            make acceptance-frontend-prod-start &
+          wait-on: |
+            http-get://localhost:55001/plone
+            http://localhost:3000
+          tail: true
+          log-output-resume: stderr
+          wait-for: 10m
+          log-output: stderr,stdout
+          log-output-if: failure
+          working-directory: ${{ inputs.working-directory }}
+
+      - name: Run Playwright acceptance tests
+        timeout-minutes: 15
+        run: make ci-acceptance-test PLAYWRIGHT_REPORTER=list,github,html
+
+      - name: Upload Playwright report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-acceptance-report
+          path: ${{ inputs.working-directory }}/playwright-report
+          retention-days: 14
+
+      - name: Upload Playwright traces
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-acceptance-results
+          path: ${{ inputs.working-directory }}/acceptance/results/acceptance
+          retention-days: 14

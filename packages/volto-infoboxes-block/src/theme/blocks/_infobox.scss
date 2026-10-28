@@ -1,0 +1,113 @@
+// Infobox Block
+//
+// The box takes its colours from the active block theme. In Volto Light
+// Theme the block sits on the band coloured by `--theme-color`, so the box
+// uses the contrasting `--theme-high-contrast-color`, like cards do.
+// Projects can override every colour with the `--infobox-*` properties.
+.block.infoboxBlock {
+  --infobox-background-color: var(--theme-high-contrast-color, #ecebeb);
+  --infobox-foreground-color: var(--theme-foreground-color, #000);
+  --infobox-button-background-color: var(--theme-foreground-color, #000);
+  --infobox-button-foreground-color: var(--theme-high-contrast-color, #fff);
+
+  // Gap between a floated box and the edge of the default container.
+  --infobox-float-offset: max(
+    0px,
+    calc((100% - var(--default-container-width, 940px)) / 2)
+  );
+
+  .inner {
+    padding: 25px;
+    background: var(--infobox-background-color);
+    color: var(--infobox-foreground-color);
+
+    &.center {
+      max-width: var(--narrow-container-width, 620px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &.left,
+    &.right {
+      position: relative;
+      z-index: 2;
+      width: 460px;
+      max-width: 50%;
+      margin-bottom: 20px;
+    }
+
+    &.left {
+      margin-right: 2em;
+      margin-left: var(--infobox-float-offset);
+      float: left;
+    }
+
+    &.right {
+      margin-right: var(--infobox-float-offset);
+      margin-left: 2em;
+      float: right;
+    }
+
+    @media only screen and (max-width: 768px) {
+      &.left,
+      &.right {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        float: none;
+      }
+    }
+  }
+
+  .title_row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+    gap: 15px;
+
+    .icon {
+      height: 30px;
+    }
+
+    .title {
+      margin: 0;
+      color: inherit;
+      font-size: var(--infobox-title-font-size, 24px);
+      line-height: 1.25;
+    }
+  }
+
+  .info-text {
+    --link-foreground-color: var(--infobox-foreground-color);
+
+    margin-bottom: 50px;
+
+    p,
+    ul,
+    ol,
+    li,
+    a:any-link {
+      background-color: initial;
+      color: inherit;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Raised specificity to win over the theme's generic content link styles.
+  .inner .button {
+    --link-foreground-color: var(--infobox-button-foreground-color);
+
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background: var(--infobox-button-background-color);
+    color: var(--infobox-button-foreground-color);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
