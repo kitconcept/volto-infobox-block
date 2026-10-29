@@ -62,8 +62,8 @@ const defaultRazzleOptions = {
 
 module.exports = {
   stories: [
-    '../packages/**/*.mdx',
-    '../packages/**/*.stories.@(js|jsx|ts|tsx)',
+    '../packages/volto-infobox-block/*.mdx',
+    '../packages/volto-infobox-block/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-links',
