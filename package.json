@@ -1,6 +1,6 @@
 {
   "name": "@kitconcept/volto-infobox-block-dev",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "An infobox block for Volto: an optional icon, a title, rich text and a call-to-action button.",
   "author": "kitconcept GmbH",
   "homepage": "https://github.com/kitconcept/volto-infobox-block",

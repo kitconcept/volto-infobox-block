@@ -7,3 +7,10 @@
 -->
 
 <!-- towncrier release notes start -->
+
+## 1.0.0-alpha.1 (2026-10-30)
+
+
+### Feature
+
+- Add the Infobox block, extracted from the DLR project. @iFlameing
